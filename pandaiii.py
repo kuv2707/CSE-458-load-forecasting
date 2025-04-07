@@ -2,7 +2,7 @@ import pandas as pd
 import json
 from datetime import datetime
 
-file_path =  r"C:\Users\manoj\OneDrive\Desktop\explodata.csvs.json" 
+file_path =  r"./dataset.json" 
 
 def load_and_process_data(file_path):
     with open(file_path, 'r') as file:
@@ -32,7 +32,7 @@ df = load_and_process_data(file_path)
 
 print(df.head())
 
-output_file_path = r"C:\Users\manoj\OneDrive\Desktop\export_data.csv.txt"
+output_file_path = r"./export_data.csv.txt"
 df.to_csv(output_file_path, index=False)
 
 print(f"Data exported to '{output_file_path}' successfully.")
